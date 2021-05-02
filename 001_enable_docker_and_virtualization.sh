@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 PROJECT_DIR=`pwd`
-LOGFILE=$PROJECT_DIR/001_enable_docker_and_virtualization.log
-exec >> $LOGFILE 2>&1
 
 # Update package cache and upgrade packages
 apt-get update -y && apt-get upgrade -y

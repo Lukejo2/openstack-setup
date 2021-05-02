@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 PROJECT_DIR=`pwd`
-LOGFILE="${PROJECT_DIR}/004_kolla_pre_deploy.log"
-exec >> $LOGFILE 2>&1
 
 # Generate passwords for use with kolla-ansible
 kolla-genpwd

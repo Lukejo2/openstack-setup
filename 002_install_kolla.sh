@@ -1,13 +1,7 @@
 #!/usr/bin/env bash
 PROJECT_DIR=`pwd`
-LOGFILE=$PROJECT_DIR/002_install_kolla.log
-
-exec >> $LOGFILE 2>&1
 
 # Configure libvirt for kolla
-# disable libvirt
-#systemctl stop libvirt-bin 
-#systemctl disable libvirt-bin
 
 # Stop Libvirtd
 systemctl stop libvirtd.service
@@ -58,7 +52,7 @@ cp /usr/local/share/kolla/etc_examples/oslo-config-generator/kolla-build.conf /e
 # Get the Working Globals.yml
 # wget https://raw.githubusercontent.com/AmpereComputing/openstack-kolla-aio-scripts/master/etc/kolla/globals.yml -O /etc/kolla/globals.yml
 cd $PROJECT_DIR
-cp etc/kolla/globals.yml /etc/kolla/globals.yml
+cp ./globals.yml /etc/kolla/globals.yml
 
 # Create /etc/kolla/config/global.conf
 
